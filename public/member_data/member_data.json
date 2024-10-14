@@ -46,5 +46,19 @@
         "description": "非常好理论，爱来自对立"
       }
     ]
+    },
+    {
+      "id": 3,
+        "name": "Faspand",
+        "title":"Technical supporter",
+      "description": "「みんなと繋がりたい」",
+      "image": "/image/faspand.png",
+      "timeline": [
+      {
+        "date": "2022/06/10",
+        "title": "Join our club",
+        "description": "Faspand joined our club and started to help us with technical issues."
+      }
+    ]
     }
   ]
