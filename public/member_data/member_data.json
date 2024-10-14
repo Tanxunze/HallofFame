@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Ink",
+      "title":"音高祖",
+      "description": "A top pjsk player.",
+      "image": "/image/ink.jpg",
+      "timeline": [
+      {
+        "date": "2021",
+        "title": "Joined the Club",
+        "description": "Ink set up the sdut rhythm game club."
+      },
+      {
+        "date": "2022",
+        "title": "become a wmc",
+        "description": "the life is like this"
+      },
+      {
+        "date": "2023",
+        "title": "continue to be a wmc",
+        "description": "the life is like this again"
+      },
+      {
+        "date": "2024",
+        "title": "not a wmc",
+        "description": "永远怀念"
+      }
+
+    ]
+    },
+    {
+      "id": 2,
+        "name": "Praeshere",
+        "title":"2024年冠军",
+      "description": "Champion of 2024.",
+      "image": "/image/praeshere.jpg",
+      "timeline": [
+      {
+        "date": "2021",
+        "title": "Joined the Club",
+        "description": "Ink joined the rhythm game club."
+      },
+      {
+        "date": "2022",
+        "title": "Won First Championship",
+        "description": "Won the local rhythm game championship."
+      }
+    ]
+    }
+  ]
