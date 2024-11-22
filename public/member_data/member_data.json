@@ -11,7 +11,12 @@
         "title": "Established our club",
         "description": "Ink set up the sdut rhythm game club."
       }
-    ]
+    ],
+        "rating": {
+            "Maimai DX": "13500",
+            "Arcaea": "12.00",
+            "Chunithm": "121.32"
+        }
     },
     {
       "id": 2,
@@ -52,7 +57,12 @@
             "needImg": true,
             "imgUrl": "https://cfr2.mionet.top/mionet-a/2024/11/23/6740cf58af622.png"
         }
-    ]
+    ],
+        "rating": {
+            "Maimai DX": "15500",
+            "Arcaea": "13.00",
+            "Chunithm": "28.00"
+        }
     },
     {
       "id": 3,
@@ -81,6 +91,11 @@
         "title": "Join our club",
         "description": "Faspand joined our club and started to help us with technical issues."
       }
-    ]
+    ],
+        "rating": {
+            "Maimai DX": "14500",
+            "Arcaea": "11.87",
+            "Chunithm": "11.00"
+        }
     }
   ]

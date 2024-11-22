@@ -2,6 +2,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
     Box,
+    Button,
     Card,
     CardContent,
     CardMedia,
@@ -12,18 +13,21 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-    const [members, setMembers] = useState([]);
-    const [current, setCurrent] = useState(0); // Initialize current index
-    console.log(members);//debug
-    const navigate = useNavigate();
+  const [members, setMembers] = useState([]);
+  const [current, setCurrent] = useState(0); // Initialize current index
+  const navigate = useNavigate();
 
-    const goToDetails = (id) => {
-        navigate(`/member/${id}`);
-        console.log(id);
-    };
+  const goToDetails = (id) => {
+    navigate(`/member/${id}`);
+    console.log(id); // Debug information
+  };
+
+  const goToLeaderboard = () => {
+    navigate("/leaderboard"); 
+  };
 
   useEffect(() => {
-    fetch("member_data/member_data.json") 
+    fetch("/member_data/member_data.json")
       .then((response) => response.json())
       .then((data) => setMembers(data))
       .catch((error) => console.error("加载成员数据时出错:", error));
@@ -77,26 +81,17 @@ function HomePage() {
           backgroundClip: "text",
           textFillColor: "transparent",
         }}
-        color="white"
       >
         Rhythm Game Hall of Fame
       </Typography>
-      <Typography
-        variant="h4"
-        component="h1"
-        sx={{
-          my: 1,
-          zIndex: 1,
-          background:
-            "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          textFillColor: "transparent",
-        }}
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={goToLeaderboard}
+        sx={{ my: 2, backgroundColor: "pink" }}
       >
-        那些值得我们铭记的成员
-      </Typography>
+        Go to Leaderboard
+      </Button>
       <Box
         sx={{
           display: "flex",
@@ -111,7 +106,7 @@ function HomePage() {
           <Card
             sx={{ flexGrow: 1, maxWidth: "66%", mx: "auto", my: 2 }}
             key={members[current].id}
-            onClick={() => goToDetails(members[current].id)} //jump to member details page
+            onClick={() => goToDetails(members[current].id)}
           >
             <CardMedia
               component="img"
@@ -123,7 +118,7 @@ function HomePage() {
               <Typography gutterBottom variant="h5" component="div">
                 {members[current].name}
               </Typography>
-              <Typography gutterBottom variant="body1" component="div">
+              <Typography variant="body1" component="div">
                 {members[current].title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -136,7 +131,6 @@ function HomePage() {
           <ArrowForwardIosIcon />
         </IconButton>
       </Box>
-
       <Box sx={{ my: 4, textAlign: "center", zIndex: 1 }}>
         <Typography variant="body2">
           © 2024 MioNet. All rights reserved.
