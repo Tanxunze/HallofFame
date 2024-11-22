@@ -1,15 +1,16 @@
-import { Box, Card, Divider, Typography } from "@mui/material";
+import { Box, Button, Card, Divider, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Timeline from "./Timeline";
 
 function MemberDetails() {
-  const { id } = useParams(); 
-  const [member, setMember] = useState(null); 
-  const [error, setError] = useState(false); 
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const [member, setMember] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch("/member_data/member_data.json") 
+    fetch("/member_data/member_data.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -62,8 +63,17 @@ function MemberDetails() {
           flexDirection: { xs: "column", md: "row" },
           width: "100%",
           maxWidth: 1200,
+          position: "relative",
         }}
       >
+        <Button
+          sx={{ position: "absolute", top: 16, left: 16, background: "pink" }}
+          variant="contained"
+          onClick={() => navigate(-1)} 
+        >
+          Back
+        </Button>
+
         <Box sx={{ width: { xs: "100%", md: "50%" }, p: 2 }}>
           <img
             src={member.image}

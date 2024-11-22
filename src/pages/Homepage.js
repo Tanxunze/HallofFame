@@ -64,7 +64,12 @@ function HomePage() {
         },
       }}
     >
-      <Typography variant="h3" component="h1" sx={{ my: 4, zIndex: 1 }}>
+      <Typography
+        variant="h3"
+        component="h1"
+        sx={{ my: 4, zIndex: 1 }}
+        color="white"
+      >
         Rhythm Game Hall of Fame
       </Typography>
       <Typography
@@ -88,11 +93,11 @@ function HomePage() {
           <Card
             sx={{ flexGrow: 1, maxWidth: "66%", mx: "auto", my: 2 }}
             key={members[current].id}
-            onClick={() => goToDetails(members[current].id)}//jump to member details page
+            onClick={() => goToDetails(members[current].id)} //jump to member details page
           >
             <CardMedia
               component="img"
-              height="50%" 
+              height="50%"
               image={members[current].image}
               alt={members[current].name}
             />
@@ -122,7 +127,7 @@ function HomePage() {
           <a href="https://rgff.arcueid.org">Apply for Join here?</a>
         </Typography>
         <Typography variant="body2">
-          <a href="https://sdut.arcueid.org">About</a>
+          <a href="https://rhythmclub.us.kg">About</a>
         </Typography>
       </Box>
     </Box>
