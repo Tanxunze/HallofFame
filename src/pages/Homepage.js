@@ -67,7 +67,16 @@ function HomePage() {
       <Typography
         variant="h3"
         component="h1"
-        sx={{ my: 4, zIndex: 1 }}
+        sx={{
+          my: 4,
+          zIndex: 1,
+          background:
+            "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          textFillColor: "transparent",
+        }}
         color="white"
       >
         Rhythm Game Hall of Fame
@@ -75,7 +84,16 @@ function HomePage() {
       <Typography
         variant="h4"
         component="h1"
-        sx={{ my: 1, color: "secondary", zIndex: 1 }}
+        sx={{
+          my: 1,
+          zIndex: 1,
+          background:
+            "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          textFillColor: "transparent",
+        }}
       >
         那些值得我们铭记的成员
       </Typography>
