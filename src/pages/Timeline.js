@@ -11,14 +11,6 @@ import { Typography } from "@mui/material";
 import React from "react";
 
 function CustomTimeline({ events }) {
-
-    const shouldReplaceTitleWithImage = (title) => {
-      return title === "Arcaea ptt reached 13.00"; // 替换成你想匹配的标题
-    };
-
-    const replacementImageUrl =
-      "https://cfr2.mionet.top/mionet-a/2024/11/23/6740cf58af622.png";
-
   return (
     <Timeline position="alternate">
       {events.map((event, index) => (
@@ -31,10 +23,10 @@ function CustomTimeline({ events }) {
             {index < events.length - 1 && <TimelineConnector />}
           </TimelineSeparator>
           <TimelineContent>
-            {shouldReplaceTitleWithImage(event.title) ? (
+            {event.needImg ? (
               <img
-                src={replacementImageUrl}
-                alt="3 star"
+                src={event.imgUrl}
+                alt={event.title}
                 style={{
                   width: "100%",
                   maxHeight: "100px",
