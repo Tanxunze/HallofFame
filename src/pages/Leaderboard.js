@@ -1,5 +1,6 @@
 import {
     Box,
+    Button,
     Card,
     CardContent,
     CardMedia,
@@ -8,6 +9,7 @@ import {
     Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -25,6 +27,7 @@ function TabPanel(props) {
 }
 
 function Leaderboard() {
+    const navigate = useNavigate();
   const [value, setValue] = useState(0);
   const [members, setMembers] = useState([]);
   const logos = {
@@ -63,6 +66,10 @@ function Leaderboard() {
     }
   };
 
+    const handleBack = () => {
+      navigate(-1); // 返回上一页
+    };
+    
   const getRatingsForGame = (gameName) => {
     return members
       .map((member) => ({
@@ -94,6 +101,9 @@ function Leaderboard() {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <Button onClick={handleBack} sx={{ m: 2, alignSelf: "flex-start", backgroundColor: "pink", color:"white"}}>
+        Back
+      </Button>
       <CardMedia
         component="img"
         image={logo}
